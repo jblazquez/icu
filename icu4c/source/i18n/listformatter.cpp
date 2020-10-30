@@ -559,6 +559,7 @@ ListFormatter::~ListFormatter() {
     delete owned;
 }
 
+#if !UCONFIG_NO_FORMATTING
 namespace {
 
 class FormattedListBuilder {
@@ -643,6 +644,7 @@ public:
 };
 
 }
+#endif
 
 UnicodeString& ListFormatter::format(
         const UnicodeString items[],
